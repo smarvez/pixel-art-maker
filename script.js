@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
+  var colNum = 50;
+  var rowNum = 30;
 
-  for (var i = 0; i < 50; i++) {
+  for (var i = 0; i < colNum; i++) {
     var column = document.createElement('div');
     var topBox = document.getElementsByClassName('top')[0];
 
@@ -9,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     topBox.append(column);
 
-    for (var j = 0; j < 30; j++) {
+    for (var j = 0; j < rowNum; j++) {
       var row = document.createElement('div');
 
       row.style.dispay = 'left';
@@ -33,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
   colorPicker.addEventListener('click', function(event) {
     chosenColor = event.target.style.backgroundColor;
     currentColor.style.backgroundColor = event.target.style.backgroundColor;
-    return chosenColor;
   })
 
   canvas.addEventListener('click', function(event) {
